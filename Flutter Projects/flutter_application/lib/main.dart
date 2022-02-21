@@ -95,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text("test"),
             const Text(
               'You have pushed the button this many times:',
             ),
@@ -102,6 +103,9 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context)=>const SecondPage()));
+            }, child: const Text("NextPage"))
           ],
         ),
       ),
@@ -110,6 +114,25 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  const SecondPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("SecondPage", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.deepPurple, fontSize: 24))
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: (){Navigator.pop(context);},
+          child: Text("Go back")
+        )
+      )
     );
   }
 }
