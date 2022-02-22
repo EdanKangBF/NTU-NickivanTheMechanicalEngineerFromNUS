@@ -50,6 +50,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  get child => null;
+
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -60,6 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -98,6 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
+            ElevatedButton(onPressed: onPressed, child: child)
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
