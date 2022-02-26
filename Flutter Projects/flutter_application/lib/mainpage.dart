@@ -1,5 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application/health_page.dart';
+import 'package:flutter_application/homepage.dart';
+import 'package:flutter_application/setting_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key, required User user})
@@ -15,24 +18,20 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
 
   int _selectedIndex = 0;
+
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black);
+
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: test',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: test',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: settings'
-    )
+    HomePage(),
+    HealthPage(),
+    SettingPage(),
+  ];
+
+  final List<Widget> widgets = [
+    HomePage(),
+    HealthPage(),
+    SettingPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -51,7 +50,7 @@ class _MainPageState extends State<MainPage> {
         title: const Text('UNIdhealth', style: TextStyle(color: Colors.black),),
       ),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: widgets.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.lightGreenAccent,
@@ -68,10 +67,6 @@ class _MainPageState extends State<MainPage> {
             icon: Icon(Icons.monitor_heart),
             label: 'Health',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.settings),
-          //   label: 'Settings',
-          // ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
