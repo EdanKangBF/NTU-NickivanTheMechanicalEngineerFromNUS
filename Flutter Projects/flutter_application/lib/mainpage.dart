@@ -1,15 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application/health_page.dart';
-import 'package:flutter_application/homepage.dart';
-import 'package:flutter_application/setting_page.dart';
+import 'package:flutter_application/screens/chat/chat_screen.dart';
+import 'package:flutter_application/screens/health/health_page.dart';
+import 'package:flutter_application/screens/home/homepage.dart';
+import 'package:flutter_application/screens/settings/setting_page.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({Key? key, required User user})
-      : _user = user,
-        super(key: key);
-
-  final User _user;
+  // const MainPage({Key? key, required User user})
+  //     : _user = user,
+  //       super(key: key);
+  //
+  // final User _user;
 
   @override
   _MainPageState createState() => _MainPageState();
@@ -24,12 +25,16 @@ class _MainPageState extends State<MainPage> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
+    ChatPage(),
     HealthPage(),
     SettingPage(),
+
+
   ];
 
   final List<Widget> widgets = [
     HomePage(),
+    ChatPage(),
     HealthPage(),
     SettingPage(),
   ];
@@ -58,15 +63,30 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
+            backgroundColor: Colors.lightGreenAccent
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
             label: 'Chat',
+            backgroundColor: Colors.lightGreenAccent
+
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.monitor_heart),
             label: 'Health',
+            backgroundColor: Colors.lightGreenAccent
+
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'setting',
+            backgroundColor: Colors.lightGreenAccent
+
+          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.settings),
+          //   label: 'Setting',
+          // ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],

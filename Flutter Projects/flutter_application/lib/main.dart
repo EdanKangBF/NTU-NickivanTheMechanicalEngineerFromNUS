@@ -18,7 +18,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.indigo,
         brightness: Brightness.dark,
       ),
-      home: SplashPage(),
+      home: MainPage(),
     );
   }
 }
