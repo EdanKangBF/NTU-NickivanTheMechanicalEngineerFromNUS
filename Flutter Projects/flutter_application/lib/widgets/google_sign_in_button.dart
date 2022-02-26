@@ -45,7 +45,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
                 builder: (context) => MainPage(
-                  user: user,
+                  // user: user,
                 ),
               ),
             );
