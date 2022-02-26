@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "852820495610",
+    "project_id": "unidhealth",
+    "storage_bucket": "unidhealth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852820495610:android:567e2188d81792b0a3cd43",
+        "android_client_info": {
+          "package_name": "com.ntuandivan.unidhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852820495610-himh3mq75034emamdlv07ebiur58131f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ntuandivan.unidhealth",
+            "certificate_hash": "aa602824d00f8c0adba79a66083b6586b47665e7"
+          }
+        },
+        {
+          "client_id": "852820495610-p98rr3r48a621j7tuf4oh8c8mjrsbr78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO3nTg_0JaL8OhNG_cFlEc8rpUVlTo7Uw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852820495610-p98rr3r48a621j7tuf4oh8c8mjrsbr78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
